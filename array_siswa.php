@@ -20,7 +20,7 @@ $ar_nilai = [$ns1,$ns2,$ns3];
         </tr>
     </thead>
     <tbody>
-        <?php
+      <?php
         $nomor = 1;
         foreach ($ar_nilai as $nilai){
         echo '<tr><td>' .$nomor. '</td>';
@@ -33,6 +33,6 @@ $ar_nilai = [$ns1,$ns2,$ns3];
         echo '<tr/>';
         $nomor++;
         }
-        ?>
+      ?>
     </tbody>
 </table>
