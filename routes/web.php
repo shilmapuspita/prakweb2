@@ -1,7 +1,8 @@
 <?php
-
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\InputController;
+use App\Http\Controllers\AboutController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\FormController;
 use Illuminate\Support\Facades\Route;
@@ -32,7 +33,7 @@ Route::get('/about', function () {
     return view('about',[
         "nama" => "Shilma Puspita",
         "umur" => 21,
-        "email" => "mftfn12"
+        "email" => "yyy"
     ]);
 });
 
@@ -61,6 +62,6 @@ Route::prefix('admin')->group(function () {
 
 // ini route untuk frontend atau user
 Route::prefix('frontend')->group(function () {
-    Route::get('/dashboard', [DashboardFrontendController::class, 'index']);
+    Route::get('/home', [HomeController::class, 'index']);
     Route::get('/about', [AboutController::class, 'index']);
 });
