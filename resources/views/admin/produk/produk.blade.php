@@ -34,6 +34,7 @@ semua code yang ada di dalam file yang di extend--}}
                                            <th>Minimal Stok</th> 
                                            <th>Deskripsi </th> 
                                            <th>Kategori Produk</th>
+                                           <th>Action</th>
                                         </tr>
                                     </thead>
                                     
@@ -52,6 +53,8 @@ semua code yang ada di dalam file yang di extend--}}
                                             <td> {{ $prod->min_stok }}</td>
                                             <td> {{ $prod->deskripsi }}</td>
                                             <td> {{ $prod->nama_kategori }}</td>
+                                            <td><a href="{{ url ('admin/produk/edit/'. $prod->id) }}" class="btn btn-success">Edit</a></td>
+                                            <td><a href="{{ url ('admin/produk/delete/'. $prod->id) }}"class="btn btn-danger">Delete</a></td>
                                         </tr>
                                         @php
                                             $no++
